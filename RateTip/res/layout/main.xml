@@ -13,7 +13,7 @@
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
 		android:layout_gravity="right" 
-		android:layout_marginRight="20dp" android:layout_marginTop="40dp">
+		android:layout_marginRight="20dp" android:layout_marginTop="30dp">
 	<TextView  
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content" 
@@ -32,14 +32,15 @@
 		android:singleLine="true"
 		android:imeOptions="actionDone"
 		android:digits="0123456789."
-		android:width="80dip">
+		android:width="75dip">
 	</EditText>
 	</RelativeLayout>
 	
 	<RelativeLayout 
 		android:id="@+id/RelativeLayout01" 
-		android:layout_height="wrap_content" 
-		android:layout_width="fill_parent" android:layout_marginTop="2dp">
+		android:layout_height="160dp" 
+		android:layout_width="fill_parent" 
+		android:layout_marginTop="2dp">
 		<ImageView 
 			android:id="@+id/ImageView01" 
 			android:src="@drawable/android_peek"
@@ -47,35 +48,37 @@
 			android:layout_height="wrap_content" 
 			android:scaleType="matrix"></ImageView>
 		<LinearLayout
-			android:layout_width="fill_parent" 
 			android:id="@+id/LinearLayout02"
-			android:layout_toRightOf="@+id/ImageView01" 
-			android:paddingRight="12dip" 
-			android:layout_height="wrap_content"
-			android:layout_alignBottom="@+id/RelativeLayout01" >
+			android:layout_width="fill_parent"
+			android:layout_height="90dp"
+			android:gravity="center"
+			android:layout_alignParentTop="true"
+			android:layout_toRightOf="@id/ImageView01"
+			android:layout_marginTop="10dp">
 			<TextView 
 				android:layout_width="fill_parent"  
+				android:layout_height="wrap_content"
+				android:layout_marginRight="12dp"
+				android:gravity="center"
 				android:text="@string/question" 
 				android:id="@+id/TextView01" 
-				android:gravity="center"
 				android:textColor="#FFFFFF" 
 				android:textSize="20sp" 
-				android:layout_marginTop="20dp"
-				android:layout_height="fill_parent"></TextView>
-		</LinearLayout>
+				/>
+		</LinearLayout>	
 		<RatingBar 
 			android:layout_width="wrap_content" 
-			android:id="@+id/RatingBar01" 
-			android:layout_toRightOf="@+id/ImageView01" 
-			android:layout_below="@+id/LinearLayout02"
 			android:layout_height="wrap_content" 
+			android:id="@+id/RatingBar01" 
+			android:layout_toRightOf="@id/ImageView01"			
+			android:layout_below="@id/LinearLayout02"
+			android:layout_alignParentBottom="true"
 			android:numStars="4" 
 			android:stepSize="1" 
 			android:layout_gravity="right" 
 			android:hapticFeedbackEnabled="true" 
-			android:focusableInTouchMode="true" 
-			android:focusable="true" 
-			android:paddingTop="20dip"></RatingBar>
+			android:focusableInTouchMode="true"
+			android:focusable="true"></RatingBar>
 	</RelativeLayout>
 
 	<RelativeLayout 
@@ -103,7 +106,7 @@
 				android:id="@+id/EditText02"
 				android:numeric="decimal"
 				android:lines="1" 
-				android:width="80dip" 
+				android:width="75dip" 
 				android:clickable="false" 
 				android:focusable="false" 
 				android:focusableInTouchMode="false"></EditText>
@@ -130,7 +133,7 @@
 				android:layout_below="@+id/EditText02"
 				android:numeric="decimal"
 				android:lines="1" 
-				android:width="80dip"
+				android:width="75dip"
 				android:focusableInTouchMode="false" 
 				android:focusable="false" 
 				android:clickable="false"></EditText>
