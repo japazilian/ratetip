@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
@@ -143,12 +141,10 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 		txt_total.setText("Total: " + curr);
 		
 		boolean bubble = prefs.getBoolean("pref_bubble", false);
-		LinearLayout ll = (LinearLayout)findViewById(R.id.LinearLayout02);
 		if(bubble) {
 			txt_rate.setBackgroundResource(R.drawable.balloon);
 			txt_rate.setTextColor(Color.BLACK);
 			rate_stars.setPadding(0, 0, 0, 0);
-			ll.setPadding(0, 0, 0, 0);
 			//txt_rate.setPadding(0, 20, 0, 0);
 		}
 		else {
@@ -156,7 +152,6 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 			txt_rate.setBackgroundDrawable(null);
 			txt_rate.setTextColor(Color.WHITE);
 			//rate_stars.setPadding(0, 20, 0, 0);
-			ll.setPadding(0, 0, 12, 0);
 			//rate_stars.setPadding(0, 20, 0, 0);
 			//txt_rate.setPadding(0, 20, 0, 0);
 		}
