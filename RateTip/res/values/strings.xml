@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bill">Bill: </string>
+    <string name="app_name">RateTip</string>
+    <string name="question">\"How was the service?\"</string>
+    <string name="tip">Tip: </string>
+    <string name="total">Total: </string>
+    <string name="round_prompt">Select Type</string>
+</resources>

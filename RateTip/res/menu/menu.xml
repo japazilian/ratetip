@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--	<item android:id = "@+id/changeText"-->
+<!--		android:title = "Change Text"/>-->
+<!--	<item android:id = "@+id/changePercent"-->
+<!--		android:title = "Change Tip %"/>-->
+<!--	<item android:id = "@+id/addTax"-->
+<!--		android:title = "Set Tax"/>-->
+<!--	<item android:id = "@+id/roundTotal"-->
+<!--		android:title = "Round Total"/>-->
+	<item android:id = "@+id/preferences"
+		android:title = "Preferences"
+		android:icon="@android:drawable/ic_menu_preferences"/>
+	<item android:id = "@+id/about"
+		android:title = "About"
+		android:icon="@android:drawable/ic_menu_help"/>
+</menu>
