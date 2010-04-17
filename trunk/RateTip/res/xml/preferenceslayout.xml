@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Customize">
+	<Preference
+		android:key="pref_text"
+		android:title="Change Text"
+		android:summary="Change the text for the question/ratings"/>
+	<Preference
+		android:key="pref_percent"
+		android:title="Change Percentages"
+		android:summary="Change the tip values for the ratings"/>
+	<Preference
+		android:key="pref_tax"
+		android:title="Set Tax"
+		android:summary="Set the tax for your area"/>
+	<Preference
+		android:key="pref_round"
+		android:title="Rounding"
+		android:summary="Set the type of rounding"/>
+	<EditTextPreference
+		android:key="pref_currency"
+		android:title="Currency Symbol"
+		android:summary="Set the symbol for your country \n(e.g. ₤ or €)"/>
+	<CheckBoxPreference
+		android:key="pref_bubble"
+		android:title="Display Bubble"
+		android:summary="Enable/Disable Android's speech bubble"/>		 
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Options">
+	<CheckBoxPreference
+		android:key="pref_swipe"
+		android:title="Swipe to Reset"
+		android:summary="Enable/Disable swiping for resetting"/>
+	<CheckBoxPreference
+		android:key="pref_tip_split"
+		android:title="Split the Tip"
+		android:summary="Also split the tip if the bill was split"/>
+	<CheckBoxPreference
+		android:key="pref_round_split"
+		android:title="Round Split Total"
+		android:summary="Also round the split bill if rounding selected"/>
+	</PreferenceCategory>
+</PreferenceScreen>

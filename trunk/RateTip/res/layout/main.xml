@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:focusable="true" 
+    android:focusableInTouchMode="true" 
+    android:id="@+id/LinearLayout01">
+
+	<RelativeLayout 
+		android:id="@+id/RelativeLayout01" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_gravity="right" 
+		android:layout_marginRight="20dp" android:layout_marginTop="40dp">
+	<TextView  
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:id="@+id/Total_Label"
+	    android:text="@string/bill"
+	    android:layout_centerVertical="false" 
+	    android:textColor="#ffffffff" android:textSize="25sp" android:layout_marginTop="4dp"/>
+	<EditText 
+		android:layout_width="wrap_content" 
+		android:layout_toRightOf="@+id/Total_Label" 
+		android:id="@+id/EditText01" 
+		android:layout_height="wrap_content" 
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:inputType="phone"
+		android:singleLine="true"
+		android:imeOptions="actionDone"
+		android:digits="0123456789."
+		android:width="80dip">
+	</EditText>
+	</RelativeLayout>
+	
+	<RelativeLayout 
+		android:id="@+id/RelativeLayout01" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" android:layout_marginTop="2dp">
+		<ImageView 
+			android:id="@+id/ImageView01" 
+			android:src="@drawable/android_peek"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:scaleType="matrix"></ImageView>
+		<LinearLayout
+			android:layout_width="fill_parent" 
+			android:id="@+id/LinearLayout02"
+			android:layout_toRightOf="@+id/ImageView01" 
+			android:paddingRight="12dip" 
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/RelativeLayout01" >
+			<TextView 
+				android:layout_width="fill_parent"  
+				android:text="@string/question" 
+				android:id="@+id/TextView01" 
+				android:gravity="center"
+				android:textColor="#FFFFFF" 
+				android:textSize="20sp" 
+				android:layout_marginTop="20dp"
+				android:layout_height="fill_parent"></TextView>
+		</LinearLayout>
+		<RatingBar 
+			android:layout_width="wrap_content" 
+			android:id="@+id/RatingBar01" 
+			android:layout_toRightOf="@+id/ImageView01" 
+			android:layout_below="@+id/LinearLayout02"
+			android:layout_height="wrap_content" 
+			android:numStars="4" 
+			android:stepSize="1" 
+			android:layout_gravity="right" 
+			android:hapticFeedbackEnabled="true" 
+			android:focusableInTouchMode="true" 
+			android:focusable="true" 
+			android:paddingTop="20dip"></RatingBar>
+	</RelativeLayout>
+
+	<RelativeLayout 
+		android:id="@+id/RelativeLayout02" 
+		android:layout_height="wrap_content" 
+		android:layout_gravity="right" 
+		android:layout_width="wrap_content" 
+		android:layout_marginRight="20dip">
+		
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/RelativeLayoutA"
+			android:layout_alignParentRight="true">
+			<TextView 
+				android:text="@string/tip" 
+				android:id="@+id/TextView02" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:textColor="#ffffffff" android:textSize="25sp" android:layout_marginTop="4dp"></TextView>
+			<EditText 
+				android:layout_width="wrap_content" 
+				android:layout_toRightOf="@+id/TextView02" 
+				android:layout_height="wrap_content" 
+				android:id="@+id/EditText02"
+				android:numeric="decimal"
+				android:lines="1" 
+				android:width="80dip" 
+				android:clickable="false" 
+				android:focusable="false" 
+				android:focusableInTouchMode="false"></EditText>
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_alignParentRight="true"
+			android:id="@+id/RelativeLayoutB"
+			android:layout_below="@+id/RelativeLayoutA">
+			<TextView 
+				android:text="@string/total" 
+				android:id="@+id/TextView03" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:textColor="#ffffffff" 
+				android:layout_below="@+id/TextView02" android:textSize="25sp" android:layout_marginTop="4dp"></TextView>
+	
+			<EditText 
+				android:layout_width="wrap_content" 
+				android:layout_toRightOf="@+id/TextView03" 
+				android:layout_height="wrap_content" 
+				android:id="@+id/EditText03" 
+				android:layout_below="@+id/EditText02"
+				android:numeric="decimal"
+				android:lines="1" 
+				android:width="80dip"
+				android:focusableInTouchMode="false" 
+				android:focusable="false" 
+				android:clickable="false"></EditText>
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_alignParentRight="true"
+			android:id="@+id/RelativeLayoutC"
+			android:layout_below="@+id/RelativeLayoutB" android:layout_marginTop="15dp">
+			<TextView 
+				android:text="Split: " 
+				android:id="@+id/TextView04" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:textColor="#ffffffff" 
+				android:layout_below="@+id/TextView02" 
+				android:textSize="25sp"></TextView>
+			<Button 
+				android:layout_width="70dp"
+				android:text="-" 
+				android:textSize="20sp"
+				android:id="@+id/Button01"  
+				android:layout_toRightOf="@+id/TextView04" android:layout_height="40dp"></Button>
+			<Button 
+				android:layout_width="70dp"
+				android:text="+"
+				android:textSize="20sp"
+				android:id="@+id/Button02" 
+				android:layout_toRightOf="@+id/Button01" android:layout_height="40dp"></Button>
+</RelativeLayout>
+</RelativeLayout>
+
+</LinearLayout>

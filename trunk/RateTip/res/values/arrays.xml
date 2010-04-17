@@ -1,0 +1,10 @@
+<resources>
+
+    <string-array name="rounding">
+        <item>None</item>
+        <item>Round up</item>
+        <item>Round down</item>
+        <item>Round normal</item>
+    </string-array>
+    
+</resources>

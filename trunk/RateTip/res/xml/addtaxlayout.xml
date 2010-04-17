@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+   <EditText 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/edit_tax"
+		android:inputType="phone"
+		android:singleLine="true"
+		android:imeOptions="actionDone"
+		android:digits="0123456789."
+		android:width="75dp"
+		android:layout_centerHorizontal="true"
+		android:gravity="center"></EditText>
+	<Button
+		android:id="@+id/button_tax"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Save"
+		android:layout_marginTop="15dp"></Button>
+</LinearLayout>

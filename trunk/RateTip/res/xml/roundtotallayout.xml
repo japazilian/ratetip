@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+   
+    <RadioGroup
+    	android:id="@+id/rg_round"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    	
+    	<RadioButton 
+    	android:id="@+id/round_none" 
+    	android:text="None"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" />
+        <RadioButton 
+    	android:id="@+id/round_up" 
+    	android:text="Round up"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" />
+        <RadioButton 
+    	android:id="@+id/round_down" 
+    	android:text="Round down"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" />
+        <RadioButton 
+    	android:id="@+id/round_normal" 
+    	android:text="Round normal"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" />
+    
+    </RadioGroup>
+	
+
+</LinearLayout>
