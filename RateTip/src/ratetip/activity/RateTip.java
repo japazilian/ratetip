@@ -264,9 +264,9 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 	    		break;
 	    	}
     	}
-    	//split
+    	//split 
 		if(split_bill > 1) {
-    		if(prefs.getBoolean("pref_tip_split", false))
+    		if(prefs.getBoolean("pref_tip_split", false)) //FIXME 
     			tip_value = tip_value/split_bill;
 			total_value = total_value/split_bill;
 			txt_total.setText("("+split_bill+") Total: " + curr);
@@ -307,8 +307,8 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
         		total_value = Math.round(total_value);
         		break;    		
         	}
-    		if(prefs.getBoolean("pref_tip_split", false))
-    			tip_value = total_value-bill_value;
+    		//if(prefs.getBoolean("pref_tip_split", false))
+    		tip_value = total_value-bill_value;
     	}
     	edit_tip.setText(String.format("%.2f", tip_value));
     	edit_total.setText(String.format("%.2f", total_value));
