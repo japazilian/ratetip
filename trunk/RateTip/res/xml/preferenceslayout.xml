@@ -20,11 +20,7 @@
 	<EditTextPreference
 		android:key="pref_currency"
 		android:title="Currency Symbol"
-		android:summary="Set the symbol for your country \n(e.g. ₤ or €)"/>
-	<CheckBoxPreference
-		android:key="pref_bubble"
-		android:title="Display Bubble"
-		android:summary="Enable/Disable Android's speech bubble"/>		 
+		android:summary="Set the symbol for your country \n(e.g. ₤ or €)"/>	 
 	</PreferenceCategory>
 	<PreferenceCategory android:title="Options">
 	<CheckBoxPreference
@@ -39,5 +35,9 @@
 		android:key="pref_round_split"
 		android:title="Round Split Total"
 		android:summary="Also round the split bill if rounding selected"/>
+	<CheckBoxPreference
+		android:key="pref_bubble"
+		android:title="Display Bubble"
+		android:summary="Enable/Disable Android's speech bubble"/>	
 	</PreferenceCategory>
 </PreferenceScreen>
