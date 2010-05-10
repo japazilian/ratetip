@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -141,16 +142,18 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 		txt_total.setText("Total: " + curr);
 		
 		boolean bubble = prefs.getBoolean("pref_bubble", false);
+		LinearLayout ll = (LinearLayout)findViewById(R.id.LinearLayout02);
 		if(bubble) {
 			txt_rate.setBackgroundResource(R.drawable.balloon);
 			txt_rate.setTextColor(Color.BLACK);
-			rate_stars.setPadding(0, 0, 0, 0);
+			//rate_stars.setPadding(0, 0, 0, 0);
 			//txt_rate.setPadding(0, 20, 0, 0);
 		}
 		else {
 			//txt_rate.setBackgroundResource(0);
 			txt_rate.setBackgroundDrawable(null);
 			txt_rate.setTextColor(Color.WHITE);
+			//ll.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, 150));
 			//rate_stars.setPadding(0, 20, 0, 0);
 			//rate_stars.setPadding(0, 20, 0, 0);
 			//txt_rate.setPadding(0, 20, 0, 0);
@@ -264,9 +267,9 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 	    		break;
 	    	}
     	}
-    	//split 
+    	//split
 		if(split_bill > 1) {
-    		if(prefs.getBoolean("pref_tip_split", false)) //FIXME 
+    		if(prefs.getBoolean("pref_tip_split", false))
     			tip_value = tip_value/split_bill;
 			total_value = total_value/split_bill;
 			txt_total.setText("("+split_bill+") Total: " + curr);
@@ -299,16 +302,19 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
         		break;
         	case 2:
         		total_value = Math.ceil(total_value);
+        		tip_value = total_value-bill_value;
         		break;
         	case 3:
         		total_value = Math.floor(total_value);
+        		tip_value = total_value-bill_value;
         		break;
         	case 4:
         		total_value = Math.round(total_value);
+        		tip_value = total_value-bill_value;
         		break;    		
         	}
     		//if(prefs.getBoolean("pref_tip_split", false))
-    		tip_value = total_value-bill_value;
+    		//	tip_value = total_value-bill_value;
     	}
     	edit_tip.setText(String.format("%.2f", tip_value));
     	edit_total.setText(String.format("%.2f", total_value));

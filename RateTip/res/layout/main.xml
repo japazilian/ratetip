@@ -50,7 +50,7 @@
 		<LinearLayout
 			android:id="@+id/LinearLayout02"
 			android:layout_width="fill_parent"
-			android:layout_height="90dp"
+			android:layout_height="80dp"
 			android:gravity="center"
 			android:layout_alignParentTop="true"
 			android:layout_toRightOf="@id/ImageView01"
@@ -73,12 +73,13 @@
 			android:layout_toRightOf="@id/ImageView01"			
 			android:layout_below="@id/LinearLayout02"
 			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="10dp"
 			android:numStars="4" 
 			android:stepSize="1" 
 			android:layout_gravity="right" 
 			android:hapticFeedbackEnabled="true" 
 			android:focusableInTouchMode="true"
-			android:focusable="true"></RatingBar>
+			android:focusable="true" android:layout_alignParentRight="true" android:layout_marginRight="12dp"></RatingBar>
 	</RelativeLayout>
 
 	<RelativeLayout 
