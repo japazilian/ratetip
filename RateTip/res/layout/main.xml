@@ -50,11 +50,10 @@
 		<LinearLayout
 			android:id="@+id/LinearLayout02"
 			android:layout_width="fill_parent"
-			android:layout_height="80dp"
 			android:gravity="center"
 			android:layout_alignParentTop="true"
 			android:layout_toRightOf="@id/ImageView01"
-			android:layout_marginTop="10dp">
+			android:layout_marginTop="10dp" android:layout_height="85dp">
 			<TextView 
 				android:layout_width="fill_parent"  
 				android:layout_height="wrap_content"
@@ -93,7 +92,7 @@
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
 			android:id="@+id/RelativeLayoutA"
-			android:layout_alignParentRight="true">
+			android:layout_alignParentRight="true" android:paddingTop="5dp">
 			<TextView 
 				android:text="@string/tip" 
 				android:id="@+id/TextView02" 
