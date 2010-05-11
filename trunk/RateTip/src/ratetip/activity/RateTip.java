@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -142,7 +141,7 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 		txt_total.setText("Total: " + curr);
 		
 		boolean bubble = prefs.getBoolean("pref_bubble", false);
-		LinearLayout ll = (LinearLayout)findViewById(R.id.LinearLayout02);
+		//LinearLayout ll = (LinearLayout)findViewById(R.id.LinearLayout02);
 		if(bubble) {
 			txt_rate.setBackgroundResource(R.drawable.balloon);
 			txt_rate.setTextColor(Color.BLACK);
@@ -269,33 +268,54 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
     	}
     	//split
 		if(split_bill > 1) {
-    		if(prefs.getBoolean("pref_tip_split", false))
-    			tip_value = tip_value/split_bill;
-			total_value = total_value/split_bill;
-			txt_total.setText("("+split_bill+") Total: " + curr);
-			//special rounding for split bill if they want it
+    		//if(prefs.getBoolean("pref_tip_split", false))
+    		//	tip_value = tip_value/split_bill;
 
+			txt_total.setText("("+split_bill+") Total: " + curr);
+			double split_total_value = total_value/split_bill;
+			double rounded_split_total_value = 0;
+			double new_tip_value = 0;
+			//special rounding for split bill if they want it
     		if(prefs.getBoolean("pref_round_split", false)) {
 				switch(settings.getInt("round_type", 1)) {
 			    	case 1:
+			    		rounded_split_total_value = split_total_value;
 			    		break;
 			    	case 2:
-			    		tip_value = tip_value + (Math.ceil(total_value) - total_value);
-			    		total_value = Math.ceil(total_value);
+			    		//tip_value = tip_value + (Math.ceil(total_value) - total_value);
+			    		rounded_split_total_value = Math.ceil(split_total_value);
 			    		break;
 			    	case 3:
-			    		tip_value = tip_value + (Math.floor(total_value) - total_value);
-			    		total_value = Math.floor(total_value);
+			    		//tip_value = tip_value + (Math.floor(total_value) - total_value);
+			    		rounded_split_total_value = Math.floor(split_total_value);
 			    		break;
 			    	case 4:
-			    		tip_value = tip_value + (Math.round(total_value) - total_value);
-			    		total_value = Math.round(total_value);
+			    		//tip_value = tip_value + (Math.round(total_value) - total_value);
+			    		rounded_split_total_value = Math.round(split_total_value);
 			    		break;    		
 		    	}
+				if(prefs.getBoolean("pref_tip_split", false)) {
+					new_tip_value = (tip_value + ((rounded_split_total_value)*split_bill) - total_value)/split_bill;
+				}
+				else {
+					//Log.d("abcde", "tip_value: "+tip_value+" \nrounded_split_total: "+rounded_split_total_value+" \nsplit_bill: "+ split_bill + " \ntotal_value: "+ total_value);
+					new_tip_value = tip_value + ((rounded_split_total_value)*split_bill) - total_value;
+				}
+				total_value = rounded_split_total_value;
     		}
+    		else { //so this means that they don't want to round their split bill
+    			if(prefs.getBoolean("pref_tip_split", false)) {
+					new_tip_value = ((split_total_value*split_bill) - bill_value)/split_bill;
+				}
+				else {
+					new_tip_value = (split_total_value*split_bill) - bill_value;
+				}
+        		total_value = split_total_value;
+    		}
+    		tip_value = new_tip_value;
     	}
     	else {
-    		//take care of rounding
+    		//take care of rounding when bill is not split (a lot easier...)
     		txt_total.setText("Total: " + curr);
         	switch(settings.getInt("round_type", 1)) {
         	case 1:

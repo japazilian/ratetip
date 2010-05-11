@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="bill">Bill: </string>
-    <string name="app_name">RateTip - Tip Calculator</string>
+    <string name="app_name">RateTip</string>
     <string name="question">\"How was the service?asdfasdf\"</string>
     <string name="tip">Tip: </string>
     <string name="total">Total: </string>

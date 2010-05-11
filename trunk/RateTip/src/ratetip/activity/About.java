@@ -21,10 +21,11 @@ public class About extends Activity {
 "\ndown - $18.93 becomes $18.00"+
 "\nnormal - $7.45 becomes $7.00 and $7.51 becomes $8.00"+
 
-"\n\nVersion 1.5 - added \"Done\" button on keyboard"+
+"\n\nVersion 1.6.1 - small bug fix"+
 
 "\n\nCreated by: Rodrigo Haragutchi"+
 
-"\n\nContact me at rharagutchi@gmail.com if you find any errors or would like any new functionalities.");
+"\n\nContact me at rharagutchi@gmail.com if you find any errors or would like any new functionalities." +
+"\n\nThank you to David P. and David V. for their help :)");
 	}
 }
