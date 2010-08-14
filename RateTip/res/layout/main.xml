@@ -32,7 +32,7 @@
 		android:singleLine="true"
 		android:imeOptions="actionDone"
 		android:digits="0123456789."
-		android:width="75dip">
+		android:width="100dip">
 	</EditText>
 	</RelativeLayout>
 	
@@ -106,7 +106,7 @@
 				android:id="@+id/EditText02"
 				android:numeric="decimal"
 				android:lines="1" 
-				android:width="75dip" 
+				android:width="100dip" 
 				android:clickable="false" 
 				android:focusable="false" 
 				android:focusableInTouchMode="false"></EditText>
@@ -133,7 +133,7 @@
 				android:layout_below="@+id/EditText02"
 				android:numeric="decimal"
 				android:lines="1" 
-				android:width="75dip"
+				android:width="100dip"
 				android:focusableInTouchMode="false" 
 				android:focusable="false" 
 				android:clickable="false"></EditText>
