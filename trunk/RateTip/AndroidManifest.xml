@@ -28,10 +28,6 @@
         <activity android:name=".ChangeText"
         		  android:label="Change Text">
         </activity>
-        <activity android:name=".ChangeTextTips"
-        		  android:label="Tips"
-        		  android:theme="@android:style/Theme.Dialog">
-        </activity>
         <activity android:name=".ChangePercent"
         		  android:label="Change Tip Percentages">
         </activity>
@@ -41,10 +37,6 @@
         </activity>
         <activity android:name=".RoundTotal"
         		  android:label="Round Total"
-        		  android:theme="@android:style/Theme.Dialog">
-        </activity>
-        <activity android:name=".About"
-        		  android:label="About"
         		  android:theme="@android:style/Theme.Dialog">
         </activity>
         <activity android:name=".Preferences"

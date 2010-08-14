@@ -357,7 +357,26 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 		case R.id.about:
 			//startActivity(new Intent(this, About.class));
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("About")
+			builder.setTitle("About")
+				   .setMessage("RateTip is a rating-based tip calculator. " +
+								"Pick a star rating, and it will use your specified tip percentage and phrase."+
+								"\n\nCheck the preferences section to customize your tip calculator and see all other options available."+
+								
+								"\n\nTo input a specific tip amount, tap on the text \"Tip: $\"."+
+								
+								"\n\nRounding is also an option:"+
+								"\nnone - no rounding"+
+								"\nup - $4.03 becomes $5.00"+
+								"\ndown - $18.93 becomes $18.00"+
+								"\nnormal - $7.45 becomes $7.00 and $7.51 becomes $8.00"+
+								
+								"\n\nVersion 1.6.2 - gui fix"+
+								
+								"\n\nCreated by: Rodrigo Haragutchi"+
+								
+								"\n\nContact me at rharagutchi@gmail.com if you find any errors or would like any new functionalities." +
+								"\n\nThank you to David P. and David V. for their help :)")
+				   .setIcon(android.R.drawable.ic_dialog_info)
 			       .setCancelable(false)
 			       .setNegativeButton("Close", new DialogInterface.OnClickListener() {
 			           public void onClick(DialogInterface dialog, int id) {
