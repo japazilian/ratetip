@@ -1,7 +1,8 @@
 package ratetip.activity;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -51,7 +52,20 @@ public class ChangeText extends Activity implements OnClickListener {
 			this.finish();
 			break;
 		case (R.id.button_txttips):
-			startActivity(new Intent(this, ChangeTextTips.class));
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle("About")
+				   .setMessage("Have fun with it! It doesn't only have to be about the quality of your food - " +
+						"It can be things like \"How hot is the waiter/waitress?\" " +
+						"Or maybe \"How fancy is your date tonight?\"")
+				   .setIcon(android.R.drawable.ic_dialog_info)
+			       .setCancelable(false)
+			       .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+			           public void onClick(DialogInterface dialog, int id) {
+			                dialog.cancel();
+			           }
+			       });
+			AlertDialog alert = builder.create();
+			alert.show();
 			break;		
 		}
 	}	
