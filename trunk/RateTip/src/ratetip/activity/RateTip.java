@@ -1,7 +1,9 @@
 package ratetip.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -353,7 +355,17 @@ public class RateTip extends Activity implements OnRatingBarChangeListener, OnTo
 			startActivity(new Intent(this, Preferences.class));
 			return true;
 		case R.id.about:
-			startActivity(new Intent(this, About.class));
+			//startActivity(new Intent(this, About.class));
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("About")
+			       .setCancelable(false)
+			       .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+			           public void onClick(DialogInterface dialog, int id) {
+			                dialog.cancel();
+			           }
+			       });
+			AlertDialog alert = builder.create();
+			alert.show();
 			return true;
 		}
 		return false;
