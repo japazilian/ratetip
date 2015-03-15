@@ -1,0 +1,1 @@
+RateTip is a rating-based tip calculator. Completely customizable! You set the percentages and phrases for each star rating from the menu
